@@ -480,7 +480,7 @@ span{
           #testimonials .suncokretov-med-slika{
             margin-top: -70px;
             height: 60px;
-            object-fit: fill;
+            background-size:cover;
          }  
           #testimonials .title-text{
             text-align: center;
