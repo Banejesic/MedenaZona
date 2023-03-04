@@ -1,0 +1,422 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 10px;
+    font-family: "montserrat", sans-serif;
+    scroll-behavior: smooth;
+}
+.container{
+    width: 100%;
+    height: auto;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+span{
+    color: #DDA70B;
+}
+
+
+/* ----- ----------- ------------  
+                Nav bar section 
+         -----------------------  */
+         #nav-bar{
+            width: 100%;
+            height: auto;
+            position: fixed;
+            z-index: 100;
+        }
+        /*  pravljenje stila za navigacijsku traku gore - uglavnom JASNO*/
+        
+        .nav-bar{
+            background-color: rgba(0, 0, 0, 0.868);
+            left: 0;     /* definiše početak nav bara od levo početak, gore početak*/
+            top: 0;
+            padding: 1rem 2rem; /* padding uz pomoću kojeg može da se širi traka, kao da se potpis i krug pomeraju*/
+            text-align: center;
+            display: flex;
+            justify-content: space-between;
+            width: 100%;     /* dok se ovo ne stavi blok je zauzimao samo prostor oko teksta...ovo ga širi skroz*/
+            position: relative;
+        }
+        /*  pravljenje stila za logo/potpis levo gore - JASNO*/
+        
+        .nav-bar .brand a{
+            color: whitesmoke;
+            font-family: 'Rock Salt', cursive;
+            font-size: 1.6rem;
+            text-decoration: none;
+            letter-spacing: .3rem;
+            position: absolute;
+            left: 2rem;
+            margin: auto 0;
+        }
+        .nav-bar .nav-list{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        /* pravljenje hamburger kruga  VECINA JASNO  */
+        
+        .nav-bar .nav-list .hamburger {
+            border: 2px solid white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;  /* pozicionira sadržaj kruga u sredinu po vetikali */
+            justify-content: center;   /* pozicionira sadržaj kruga u sredinu po horizontali */
+            height: 70px;
+            width: 70px;
+            transition: .3s ease transform;
+            cursor: pointer;
+        }
+        /*  pravljenje  */
+        
+        .nav-bar .nav-list .hamburger.active {
+            transform: rotate(360deg);
+        }
+        .nav-bar .nav-list .hamburger.active .bar:before {
+            top: 0;
+            transform: rotate(45deg);
+        }
+        .nav-bar .nav-list .hamburger.active .bar:after {
+            top: 0;
+            transform: rotate(-45deg);
+        }
+        .nav-bar .nav-list .hamburger.active .bar {
+            background-color: transparent;
+        }
+         
+        
+        /* ispod se prave  linije u hamburger krugu - JASNO ŠTA JE U PITANJU*/
+        
+        .nav-bar .nav-list .hamburger .bar {
+            height: 2px;       /* širina i debljina jedne linije sa bojom*/
+            width: 30px;
+            background-color: white;
+            position: relative;          /* zato što će trebati da se absolute pozicioniraju u narednom stilu*/
+            display: flex;
+        }
+        
+        /* ispod se prave tri linije u krugu, tačnije prave se dve jer je jedna u sredini već gotova gore  */
+        
+        .nav-bar .nav-list .hamburger .bar::before,
+        .nav-bar .nav-list .hamburger .bar::after{
+            position: absolute;
+            content: "";
+            left: 0;       /*    ???    */
+            width: 100%;
+            height: 100%;
+            background-color: white;
+            transition: .3s ease all;
+        }
+        .nav-bar .nav-list .hamburger .bar::before{
+            top: 8px;               /* donja crta, na svom topu udaljuje se od središnje crte za 8px*/
+        }
+        .nav-bar .nav-list .hamburger .bar::after{
+            bottom: 8px;
+        }
+        
+        /* pravljenje stila za nav listu */
+        
+        .nav-bar .nav-list ul{
+            position: absolute;
+            background-color: rgba(0, 0, 0, 0.897);
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 6rem 0;
+            transform: translateY(-100%); /* po vertikali ide u minus 100%, sakriva element na gore */
+            transition: .3s all transform;  /* ovo ne znam sad čemu ovde služi */
+            z-index: -1;
+        }
+        .nav-bar .nav-list ul a{
+            font-size: 2rem;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-weight: 800;
+            color: whitesmoke;
+            letter-spacing: .3rem;
+            display: block;       /* Zasto block ??????  */
+        }
+        .nav-bar .nav-list ul li{
+            padding: 2rem 0;
+            list-style: none;
+            position: relative;
+            display: block;       /* Zasto block ??????  */
+        }
+        /* pravljenje linije koja se javlja na hover ispod reči u listi*/
+        .nav-bar .nav-list ul li:after{
+            content: "";
+            position: absolute;
+            height: .2rem;
+            width:5rem;
+            left: 50%;
+            transform: translateX(-50%) scale(0);
+            bottom: 0px;               /* sta je ovde bottom ? Odakle ? */
+            background-color: whitesmoke;
+            transition: .5s ease;
+        }
+        .nav-bar .nav-list ul li:hover:after{
+            transform: translateX(-50%) scale(1);
+        }
+        .nav-bar .nav-list.open ul{
+            transform: translateY(90px);
+            transition: .5s ease;
+        }
+        
+              
+        /* --------- ----------- ------------  
+                end of  nav bar section 
+         -----------------------  */
+        
+
+         #med .suncokretov-med-slika{
+            margin-top: 75px;
+            height: 80px;
+            
+         }  
+         .med{
+            flex-direction: column;
+         }
+         .med1{
+            width: 80%;
+            margin: 20px auto;
+         }
+         .med1 .suncokretov-med-tekst h1{
+            font-size: 3rem;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+            font-family: 'Rock Salt', cursive;
+         }
+         .suncokretov-med-tekst p{
+            text-align: justify;
+            font-size: 1.6rem;
+            line-height: 2.2rem;
+         }
+         .med2{
+            margin-top: 60px;
+            
+         }
+         .med2 .suncokretov-med-tekst h1{
+            color: black;
+            font-size: 3rem;
+            text-align: left;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+         }
+         .med2 .suncokretov-med-tekst p{
+            color: black;
+            text-align: left;
+         }
+         .med2 .suncokretov-med-tekst{
+            width: 80%;
+            margin: 10px auto;
+         }
+         .med2 .suncokretov-med-tekst h2{
+            font-size: 2rem;
+            text-align: left;
+            margin: 15px 0;
+         }
+         .med2 .tegla1{
+            width: 100%;
+            margin: 20px 0;
+            transition: all .5s ease-in-out; 
+         }
+         .med2 .tegla1:hover{
+            box-shadow: 0 10px 20px 3px black;
+            transform: scale(1.2); 
+         }
+         .tegla2{
+            width: 80%;
+            margin:0 auto;
+            margin-top: 60px;
+            transition: all .5s ease-in-out; 
+         }
+         .tegla2:hover{
+            box-shadow: 0 10px 20px 3px black;
+            transform: scale(1.2); 
+        }
+         .pcela-med{
+            width: 80%;
+            margin: 15px auto;
+            transition: all .5s ease-in-out; 
+         }
+         .pcela-med:hover{
+            box-shadow: 0 10px 20px 3px black;
+            transform: scale(1.2); 
+         }
+         .med3 .suncokretov-med-tekst{
+            width: 80%;
+            margin: 10px auto;
+         }
+         .med3 .suncokretov-med-tekst h1{
+            color: black;
+            font-size: 3rem;
+            text-align: left;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+         }
+         .med3 .suncokretov-med-tekst p{
+            text-align: left;
+            font-size: 1.6rem;
+            line-height: 2.2rem;
+            margin-bottom: 30px;
+         }
+         
+        .about-btn{
+            text-decoration: none;
+            font-size: 1.6rem;
+            font-weight:600;
+            text-transform: uppercase;
+            padding: 1.3rem 2rem;
+            letter-spacing: .6rem;
+            display: inline-block;    
+            background-color:#160E05;;
+            color: whitesmoke;
+            border: 1px solid whitesmoke;
+            border-radius: 20px;
+            margin: 50px auto;
+    
+        }
+       .about-btn:hover{
+            transition: 0.8s ease;
+            background-color: #DDA70B;
+            color: #160E05;
+        }
+         
+
+
+         /* --------- ----------- ------------  
+                contact section 
+         -----------------------  */
+
+#footer{
+    background:  black;
+    padding-top: 20px;
+    width: 100%;
+    position: relative;
+  }
+  .title-text h2{
+    color: #EBAD00;
+    text-align: center;
+    font-size: 3rem;
+    font-family: 'Rock Salt', cursive;
+  }
+  .footer-slika img {
+    width: 90px;
+    position: absolute;
+    top: 20%;
+    left:40%;
+  }
+  
+  .footer-right p{
+    color: white;
+    font-size: 1.3rem;
+  }
+  .footer-right{
+      flex-basis: 57%;
+      margin-bottom: 10px;
+      padding-top: 70px;
+      text-align: center;   
+  }
+  .footer-right .fa{
+    font-size: 20px;
+    color:#EBAD00;
+    margin: 10px;
+  }
+  .social-links{
+    text-align: center;
+    padding-bottom: 20px;
+  }
+  .social-links .fa{
+    height: 40px;
+    width: 40px;
+    font-size: 20px;  /* velicina ikonica*/
+    line-height: 40px;         /* proučiti ovo  */      
+    cursor: pointer;
+    border: 1px solid#EBAD00;
+    border-radius: 12px;
+    color:#EBAD00;
+    margin: 40px 15px ;
+    margin-bottom: 20px;
+    transition: 0.5s;
+  }
+  .social-links .fa:hover{
+    background:#EBAD00;
+    color: white;
+    transform: translateY(-7px);
+  }
+  .social-links p{
+    font-size: 12px;
+    bottom: 12px;
+  }
+  #footer p{
+      color: white;
+  }
+  
+          /* --------- ----------- ------------  
+                  End of contact section 
+           -----------------------  */
+
+        /* --------- ----------- ------------  
+                media query section 
+         -----------------------  */
+         @media only screen and (min-width:768px){
+            .med {
+                width: 70%;
+                margin: 0 auto;
+            }
+            .med .suncokretov-med-slika img{
+                margin-right: 500px;
+                margin-top: -10px;
+            }
+            .tegla2{
+                width: 450px;
+                margin-left: 133px;
+                margin-top: 20px;
+            }
+            .suncokretov-med-tekst{
+                width: 70%;
+            }
+            .med2 .suncokretov-med-tekst h1{
+                margin-bottom: 40px;
+            }
+            .suncokretov-med-tekst p{
+                text-align: left;
+                font-size: 2rem;
+                line-height: 2.8rem;
+             }
+             .med2 .suncokretov-med-tekst .tegla1{
+                width: 450px;
+                margin-right: 610px;
+             }
+             .med2 .suncokretov-med-tekst h2{
+                resize: 3.5rem;
+             }
+             .pcela-med{
+                width: 450px;
+                margin-left: 133px;
+             }
+             .med3 .suncokretov-med-tekst p{
+                text-align: left;
+                font-size: 2rem;
+                line-height: 2.8rem;
+             }
+             .med3 .suncokretov-med-tekst h1{
+                margin-bottom: 40px;
+                margin-top: 40px;
+            }
+            .dugme .about-btn{
+               margin: 50px auto;
+            }
+            #footer img{
+                width: 90px;
+                position: absolute;
+                top: 20%;
+                left: 47.5%;
+            }
+        }   
