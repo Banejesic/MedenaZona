@@ -722,11 +722,11 @@ span{
             font-size: 1.8rem;
             letter-spacing: 0.8rem;
         }
-	 .hero {
-          height: 100vh;
-          width: 100%;
-          padding-top: 58rem;
-          position: relative;
+	 #hero .hero {
+             height: 100vh;
+             width: 100%;
+             padding-top: 58rem;
+             position: relative;
         }
     }
 
