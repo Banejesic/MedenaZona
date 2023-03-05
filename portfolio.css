@@ -537,7 +537,7 @@ span{
           }
           .testimonial-col:hover{
             box-shadow: 0 10px 20px 3px black;
-            transform: scale(1.2); 
+            transform: scale(1.1); 
           }
           h5{
             color: #0e0e0e;
