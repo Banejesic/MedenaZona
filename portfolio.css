@@ -643,9 +643,10 @@ span{
      }
 	.services .services-info .service .service-card .service-front .service-front-heading{
         color:black;
-        margin-bottom: 210px;
+        margin-top: 2rem;
+        margin-right:4rem;
+        font-size: 2.3rem;
         font-family: 'Rock Salt', cursive;
-        margin-right: 45px;
     }
  }
 
