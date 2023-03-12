@@ -176,7 +176,7 @@ span{
                  Hero section 
          -----------------------  */
 
-#hero{
+ #hero{
     background-image: linear-gradient(rgba(17, 17, 17, 0.281), rgba(83, 83, 83, 0.202)),url(slike/naslovna.jpg);
     background-size: cover;
     background-position: 45%;
@@ -480,11 +480,12 @@ span{
             width: 100%;
             padding: 70px 0;
             background-color:#D5DFCF;
-		position: relative; 
+            position: relative;
           }
           #testimonials .suncokretov-med-slika{
             margin-top: -70px;
             height: 60px;
+            max-width: 100%;
          }  
          #testimonials .suncokretov-med-slika img{
             object-fit: cover;
@@ -639,13 +640,13 @@ span{
          /* --------- ----------- ------------  
                 media query section 
          -----------------------  */
-@media only screen and (max-width:576px){
+ @media only screen and (max-width:576px){
       .services .services-header .services-header-heading{
          margin: 0 auto;
-         text-align: center; 
+         text-align: center;
          font-size: 2.2rem;  
      }
-	.services .services-info .service .service-card .service-front .service-front-heading{
+     .services .services-info .service .service-card .service-front .service-front-heading{
         color:black;
         margin-top: 2rem;
         margin-right:4rem;
@@ -653,6 +654,7 @@ span{
         font-family: 'Rock Salt', cursive;
     }
  }
+
 
 @media only screen and (min-width:768px){
 
@@ -674,6 +676,8 @@ span{
         position: absolute;
         left: 630px;
     }
+    
+    
     .about{
         flex-direction: row;
         margin: 0 auto;
@@ -687,12 +691,10 @@ span{
     .about .about-info .about-desc{
         font-size: 1.6rem;
     }
-	
+    
     .services .services-header .services-header-heading{
-       width: 50%;
        margin: 0 auto;
-       text-align: left;
-       padding-left: 25px;
+       text-align: center;
     }
     .services .services-header .services-header-desc{
         max-width: 1000px;
@@ -709,6 +711,10 @@ span{
     }
     .services .services-info .service-card{
        padding: 0 15px;
+    }
+    
+    #testimonials .suncokretov-med-slika{
+        max-width: 400px;
     }
     #testimonials .testimonial-row{
         display: flex;
@@ -742,10 +748,11 @@ span{
             font-size: 1.8rem;
             letter-spacing: 0.8rem;
         }
-	.hero {
+        .hero {
             height: 100vh;
             width: 100%;
             padding-top: 58rem;
+            position: relative;
         }
     }
 
