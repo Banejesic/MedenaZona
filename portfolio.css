@@ -683,6 +683,12 @@ span{
     .about .about-info .about-desc{
         font-size: 1.6rem;
     }
+	.services .services-info .service:nth-child(2) .service-card .service-front {
+        background-image: url(./slike/med33.jpg);
+        background-size: cover;
+        position: relative;
+        color: white;
+    }
     .services .services-header .services-header-heading{
        width: 50%;
        margin: 0 auto;
