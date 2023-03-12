@@ -176,8 +176,8 @@ span{
                  Hero section 
          -----------------------  */
 
- #hero{
-    background: url(slike/naslovna.jpg);
+#hero{
+    background-image: linear-gradient(rgba(17, 17, 17, 0.281), rgba(83, 83, 83, 0.202)),url(slike/naslovna.jpg);
     background-size: cover;
     background-position: 45%;
 }      
