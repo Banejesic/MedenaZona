@@ -641,6 +641,12 @@ span{
          text-align: center; 
          font-size: 2.2rem;  
      }
+	.services .services-info .service .service-card .service-front .service-front-heading{
+        color:black;
+        margin-bottom: 210px;
+        font-family: 'Rock Salt', cursive;
+        margin-right: 45px;
+    }
  }
 
 @media only screen and (min-width:768px){
