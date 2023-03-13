@@ -261,12 +261,19 @@ span{
             letter-spacing: .1rem;
             line-height: 2.2rem;
         }
-        
+        .wave-top{
+            position: absolute;
+            top: 0;
+        }
+        #pcele{
+            position: relative;
+        }
         .pcele{
             display: flex;
             flex-direction: column;
             width: 100%;
             margin: 0 auto;
+            padding-top: 7rem;
             background-color: antiquewhite;
         }
         .pcele .pcele-info{
@@ -417,9 +424,11 @@ span{
                 display: flex;
                 flex-direction: row;
                 justify-content: space-around;
+                
             }
             .pcele-info{
                 flex-basis: 30%;
+                padding-top: 10rem;
             }
             .dugme .about-btn{
                margin: 50px auto;
