@@ -256,7 +256,7 @@ span{
     }
 
 .about .about-info{
-    padding: 0 5rem 3rem 5rem;
+    padding: 0 5rem 2rem 5rem;
     text-align: center;
     justify-content: center;
 }
@@ -312,18 +312,25 @@ span{
          /* --------- ----------- ------------  
                 Service section 
          -----------------------  */
-    #services{
-        background-color: rgb(0, 0, 0);
-        color: whitesmoke;
-    }
+
+         .wave-top{
+            position: absolute;
+            top: 0;
+        }          
+        #services{
+            background-color: rgb(0, 0, 0);
+            color: whitesmoke;
+            position: relative;
+        }
          .services {
             flex-direction: column;
             min-height: 60vh;
-            padding: 7rem 5rem;
+            padding: 7rem 0;
         }
         .services .services-header {
             width: 100%;
             text-align: center;
+            padding: 0 5rem;
         }
         .services .services-header .services-header-heading {
             font-size: 3rem;
@@ -334,14 +341,15 @@ span{
             padding-bottom: 4rem;
         }
         .services .services-header .services-header-desc {
-            font-size: 1.3rem;
-            line-height: 2rem;
+            font-size: 1.7rem;
+            line-height: 2.2rem;
             margin-top: 20px;
             text-align: left;
         }
         .services .services-info {
             margin-top: 30px;
             display: flex;
+            padding: 0 5rem;
             align-items: center;
             justify-content: center;
             width: 100%;
@@ -676,22 +684,26 @@ span{
         position: absolute;
         left: 630px;
     }
-    
-    
     .about{
         flex-direction: row;
         margin: 0 auto;
-        _width: 80%;
+        padding-bottom: 5rem;
     }
     .about .about-info{
        width: 50%;
        text-align: left;   /* i ovde kao i gore radi poravnanje na levo*/
        padding-right:17rem;
     }
+    .about .about-info .about-heading{
+        text-align: center;
+        padding: 4rem 0;
+    }
     .about .about-info .about-desc{
         font-size: 1.6rem;
     }
-    
+    .services .services-header{
+        margin-top: 6rem;
+    }
     .services .services-header .services-header-heading{
        margin: 0 auto;
        text-align: center;
@@ -726,7 +738,7 @@ span{
     }
     .testimonial-col:hover{
         box-shadow: 0 10px 20px 3px black;
-        transform: scale(1.2); 
+        transform: scale(1.1); 
       }
     #testimonials .title-text p{
         font-size: 1.6rem;
