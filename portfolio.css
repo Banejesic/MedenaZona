@@ -330,7 +330,7 @@ span{
         .services .services-header {
             width: 100%;
             text-align: center;
-            padding: 0 5rem;
+            padding: 0 3rem;
         }
         .services .services-header .services-header-heading {
             font-size: 3rem;
@@ -349,7 +349,7 @@ span{
         .services .services-info {
             margin-top: 30px;
             display: flex;
-            padding: 0 5rem;
+            padding: 0 3rem;
             align-items: center;
             justify-content: center;
             width: 100%;
