@@ -179,18 +179,27 @@ span{
                about section 
          -----------------------  */
               
-
+         .wave{
+            position: absolute;
+            bottom: 0;
+        }
          .about{
             min-height: 50vh;
             width: 100%;
             flex-direction: column;
-            padding: 15rem 5rem;
+            padding-top: 15rem;
+            padding-bottom: 5rem;
             background-color: rgb(0, 0, 0);
+            position: relative;
             }
+        .about .about-img{
+            padding:0 5rem;
+        }    
         .about .about-info{
             text-align: center;
             justify-content: center;
             margin-top: 5rem;
+            padding: 0 5rem 0 5rem;
         }
         .about .about-info .about-heading{
             margin-bottom: 30px;
@@ -204,11 +213,11 @@ span{
             padding-bottom: 55px;
             font-size: 1.5rem;
             line-height: 2.2rem;
-            text-align: justify;
+            text-align: left;
             color: whitesmoke;
         }
         .about .about-img{          /* ovde se nista ne desava dok se ne ubaci stil za img */
-            max-width: 400px;
+            max-width: 500px;
             height: auto;
             position: relative;
             display: inline-block;
@@ -222,7 +231,7 @@ span{
         .about .about-img::after{       
             content: "";                       
             position: absolute;
-            right: -3rem;
+            right: -1rem;
             top: 50%;
             transform: translateY(-50%);
             width: 70%;
@@ -273,7 +282,7 @@ span{
             font-size: 1.5rem;
             letter-spacing: .1rem;
             line-height: 2.2rem;
-            text-align: justify;
+            text-align: left;
             margin-bottom: 12px;
         }
         .pcele .pcele-img {
@@ -378,12 +387,17 @@ span{
 /* --------- ----------- ------------  
                 media query section 
          -----------------------  */
+
+
          @media only screen and (min-width:768px){
             .about {
                 flex-direction: row;
                 margin: 0 auto;
                 align-items: center;
+                padding-top: 10rem;
+                padding-bottom: 15rem;
             }
+            
             .about .about-info{
                width: 50%;
                text-align: left;   
